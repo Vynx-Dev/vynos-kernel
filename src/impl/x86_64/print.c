@@ -7,7 +7,7 @@ struct Char {
 };
 struct Char* buffer = (struct Char*) 0xb8000;
 size_t col = 0;
-size_t row = 0;
+size_t row = 1;
 uint8_t color = PRINT_COLOR_WHITE | PRINT_COLOR_BLACK << 4;
 void clear_row(size_t row) {
     struct Char empty = (struct Char) {
@@ -29,8 +29,8 @@ void print_newline() {
         row++;
         return;
     }
-    for (size_t row = 1; row < NUM_ROWS; row++) {
-        for (size_t col = 0; col < NUM_COLS; col++) {
+    for (row; row < NUM_ROWS; row++) {
+        for (col; col < NUM_COLS; col++) {
             struct Char character = buffer[col + NUM_COLS * row];
             buffer[col + NUM_COLS * (row - 1)] = character;
         }
