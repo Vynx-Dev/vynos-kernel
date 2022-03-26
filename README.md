@@ -1,8 +1,10 @@
 # VynOS
 Under Development!
 # Compiling
-`docker build buildenv -t vynos-buildenv`
+### Prerequisites
+Docker
 ### Entering compilation enviorment
+`docker build buildenv -t vynos-buildenv`
 `docker run --rm -it -v C:\insertpathtoclonedrepohere:/root/env vynos-buildenv`
 ### Making files
 `make build-x86_64`
