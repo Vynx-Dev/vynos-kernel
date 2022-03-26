@@ -2,7 +2,7 @@
 Under Development!
 # Compiling
 ### Prerequisites
-Docker
+Docker, QEMU
 ### Entering compilation enviorment
 `docker build buildenv -t vynos-buildenv`
 `docker run --rm -it -v C:\insertpathtoclonedrepohere:/root/env vynos-buildenv`
