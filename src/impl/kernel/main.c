@@ -1,6 +1,6 @@
 #include <stdint.h>
 #include "print.h"
-// Sta
+
 #if UINT32_MAX == UINTPTR_MAX
 #define STACK_CHK_GUARD 0xe2dae263
 #else
