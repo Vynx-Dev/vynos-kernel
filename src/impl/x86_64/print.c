@@ -18,11 +18,13 @@ void clear_row(size_t row) {
         buffer[col + NUM_COLS * row] = empty;
     }
 }
+// Clears Screen
 void print_clear() {
     for (size_t i = 0; i < NUM_ROWS; i++) {
         clear_row(i);
     }
 }
+// Adds new row to stdout
 void print_newline() {
     col = 0;
     if (row < NUM_ROWS - 1) {
@@ -37,6 +39,7 @@ void print_newline() {
     }
     clear_row(NUM_COLS - 1);
 }
+// prints char to stdout 
 void print_char(char character) {
     if (character == '\n') {
         print_newline();
@@ -51,6 +54,7 @@ void print_char(char character) {
     };
     col++;
 }
+// prints string to std out 
 void print_str(char* str) {
     for (size_t i = 0; 1; i++) {
         char character = (uint8_t) str[i];
@@ -60,6 +64,7 @@ void print_str(char* str) {
         print_char(character);
     }
 }
+// First declare the background of the text, then the color of the text itself
 void print_set_color(uint8_t foreground, uint8_t background) {
     color = foreground + (background << 4);
 }
