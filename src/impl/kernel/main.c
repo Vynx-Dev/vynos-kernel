@@ -1,5 +1,4 @@
 #include <stdint.h>
-#include <stdlib.h>
 #include "print.h"
 
 #if UINT32_MAX == UINTPTR_MAX
