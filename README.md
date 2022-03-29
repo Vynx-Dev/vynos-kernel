@@ -1,7 +1,7 @@
 # VynOS
 Under Development!
-# Compiling
-### Prerequisites
+# Compiling and Running
+## Prerequisites
 Docker, QEMU, WSL
 ### Entering compilation enviorment
 `docker build buildenv -t vynos-buildenv`
@@ -12,3 +12,7 @@ Docker, QEMU, WSL
 `qemu-system-x86-64 -cdrom dist/x86_64/kernel.iso`
 Or just flash the ISO to a CD-ROM or DVD, then boot the OS from the CD-ROM/DVD
 You can easily download the ISO from releases
+# Docs
+Please check out the docs in docs/
+
+These docs contain important info about error codes and OS contributing
