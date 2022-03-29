@@ -19,7 +19,7 @@ void __stack_chk_fail(void)
 	panic("Panic #0");
 #endif
 }
-// Start Main Kernel
+// Start kernel's main printing process.
 void kernel_main(){
     print_clear();
     print_set_color(PRINT_COLOR_WHITE, PRINT_COLOR_GREEN);// First declare the background of the text, then the color of the text itself.
