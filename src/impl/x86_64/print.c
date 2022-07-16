@@ -68,3 +68,26 @@ void print_str(char* str) {
 void print_set_color(uint8_t foreground, uint8_t background) {
     color = foreground + (background << 4);
 }
+
+void print_kmsg(bool success, char* msg) {
+	if (success) {
+		print_set_color(PRINT_COLOR_WHITE, PRINT_COLOR_BLACK);
+		print_str("[ ");
+		print_set_color(PRINT_COLOR_GREEN, PRINT_COLOR_WHITE);
+		print_str("OK ");
+		print_set_color(PRINT_COLOR_WHITE, PRINT_COLOR_BLACK);
+		print_str("] ");
+		print_str(msg);
+	} else {
+		
+		print_set_color(PRINT_COLOR_WHITE, PRINT_COLOR_BLACK);
+		print_str("[ ");
+		print_set_color(PRINT_COLOR_RED, PRINT_COLOR_WHITE);
+		print_str("FAIL ");
+		print_set_color(PRINT_COLOR_WHITE, PRINT_COLOR_BLACK);
+		print_str("] ");
+		print_str(msg);
+	}
+}
+}
+
