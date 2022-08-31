@@ -2,7 +2,7 @@
 Under Development!
 # Compiling and Running
 ## Prerequisites
-Docker, QEMU, WSL
+Docker, QEMU, WSL (if you're on windows)
 ### Entering compilation enviorment
 `docker build buildenv -t vynos-buildenv`
 `docker run --rm -it -v C:\insertpathtoclonedrepohere:/root/env vynos-buildenv`
