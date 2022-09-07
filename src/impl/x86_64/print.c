@@ -70,7 +70,7 @@ void print_set_color(uint8_t foreground, uint8_t background) {
 }
 
 void print_kmsg(_Bool success, char* msg) {
-	if (success) {
+	if (success == 1) {
 		print_set_color(PRINT_COLOR_WHITE, PRINT_COLOR_BLACK);
 		print_str("[ ");
 		print_set_color(PRINT_COLOR_GREEN, PRINT_COLOR_WHITE);
