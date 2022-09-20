@@ -4,8 +4,9 @@ Under Development!
 ## Prerequisites
 Docker, QEMU-system-x86-64, WSL (if you're on windows)
 ### Entering compilation enviorment
-`docker build buildenv -t vynos-buildenv`
-`docker run --rm -it -v C:\insertpathtoclonedrepohere:/root/env vynos-buildenv`
+MAKE SURE DOCKER IS RUNNING FIRST
+`sudo docker build buildenv -t vynos-buildenv`
+`sudo docker run --rm -it -v C:\insertpathtoclonedrepohere:/root/env vynos-buildenv`
 ### Making files
 `make build-x86_64`
 ### Emulating
