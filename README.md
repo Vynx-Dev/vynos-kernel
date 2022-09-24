@@ -2,7 +2,7 @@
 Under Development!
 # Compiling and Running
 ## Prerequisites
-Docker, QEMU-system-x86-64, WSL (if you're on windows)
+Docker, QEMU (you just need the qemu-system-x86_64 binary), WSL (if you're on windows)
 ### Entering compilation enviorment
 MAKE SURE DOCKER IS RUNNING FIRST
 `sudo docker build buildenv -t vynos-buildenv`
