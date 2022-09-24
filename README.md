@@ -6,7 +6,7 @@ Docker, QEMU (you just need the qemu-system-x86_64 binary), WSL (if you're on wi
 ### Entering compilation enviorment
 MAKE SURE DOCKER IS RUNNING FIRST
 `sudo docker build buildenv -t vynos-buildenv`
-`sudo docker run --rm -it -v C:\insertpathtoclonedrepohere:/root/env vynos-buildenv`
+`sudo docker run --rm -it -v /insertpathtoclonedrepohere:/root/env vynos-buildenv`
 ### Making files
 `make build-x86_64`
 ### Emulating
