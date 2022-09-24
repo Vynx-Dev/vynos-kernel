@@ -21,7 +21,7 @@ MAKE SURE DOCKER IS RUNNING FIRST
 
 ### Emulating
 
-`qemu-system-x86-64 -cdrom dist/x86_64/kernel.iso`
+`qemu-system-x86_64 -cdrom dist/x86_64/kernel.iso`
 
 Or just flash the ISO to a CD-ROM or DVD, then boot the OS from the CD-ROM/DVD,
 
