@@ -20,8 +20,15 @@ void __stack_chk_fail(void)
 #endif
 }
 // GDT stuff
+
+struct main
+{
+    /* data */
+};
+
+
 void create_gdt_entry(uint16_t *target, struct GDT source) {
-    if (source.limit > 0xFFFFF) {kerror("Can not encode GDT over 0xFFFFF")}
+    if (source.limit > 0xFFFFF) {print_kmsg(1, "GDT cannot encode limits larger than 0xFFFFF");}
     target[0] = source.limit & 0xFF;
     target[1] = (source.limit >> 8) & 0xFF;
     target[6] = (source.limit >> 16) & 0x0F;
@@ -33,7 +40,7 @@ void create_gdt_entry(uint16_t *target, struct GDT source) {
 
     target[5] = source.access_byte;
 
-    target[6] |= (source.flags << 4)
+    target[6] |= (source.flags << 4);
  
 }
 
