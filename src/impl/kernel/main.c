@@ -20,8 +20,7 @@ void __stack_chk_fail(void)
 #endif
 }
 // GDT stuff
-void create_gdt_entry(uint16_t *target, struct GDT source)
-{
+void create_gdt_entry(uint16_t *target, struct GDT source) {
     if (source.limit > 0xFFFFF) {kerror("Can not encode GDT over 0xFFFFF")}
     target[0] = source.limit & 0xFF;
     target[1] = (source.limit >> 8) & 0xFF;
