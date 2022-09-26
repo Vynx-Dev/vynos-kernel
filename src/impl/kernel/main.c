@@ -19,7 +19,26 @@ void __stack_chk_fail(void)
 	panic("Panic #0");
 #endif
 }
-// Starts the kernel's main printing process.
+// GDT stuff
+void create_gdt_entry(uint16_t *target, struct GDT source)
+{
+    if (source.limit > 0xFFFFF) {kerror("Can not encode GDT over 0xFFFFF")}
+    target[0] = source.limit & 0xFF;
+    target[1] = (source.limit >> 8) & 0xFF;
+    target[6] = (source.limit >> 16) & 0x0F;
+
+    target[2] = source.base & 0xFF;
+    target[3] = (source.base >> 8) & 0xFF;
+    target[4] = (source.base >> 16) & 0xFF;
+    target[7] = (source.base >> 24) & 0xFF;
+
+    target[5] = source.access_byte;
+
+    target[6] |= (source.flags << 4)
+ 
+}
+
+// Starts the kernel
 void kernel_main(){
     print_clear();
     print_set_color(PRINT_COLOR_WHITE, PRINT_COLOR_GREEN);// First declare the background of the text, then the color of the text itself.
