@@ -41,6 +41,8 @@ void create_gdt_entry(uint16_t *target, struct GDT source)
 // Starts the kernel
 void kernel_main(){
     print_clear();
-    print_set_color(PRINT_COLOR_WHITE, PRINT_COLOR_GREEN);// First declare the background of the text, then the color of the text itself.
-    print_str("OK");
+    print_set_color(PRINT_COLOR_WHITE, PRINT_COLOR_GREEN);// First declare the color of the text itself, then the background color of the text. Refer to print.h for a list of colours.
+    print_str("OK\n\n");
+    print_set_color(PRINT_COLOR_CYAN, PRINT_COLOR_MAGENTA);
+    print_str("Welcome to VynOS! (work in progress!)");
 }
