@@ -2,6 +2,9 @@
 
 Under Development!
 
+Thanks for all the requests for new features, but I can't implement all of them because there are too many...
+However... I am working on an *unstable* rewrite for the OS, the rewrite is [here](https://github.com/Vynx-Dev/vynos-kernel/tree/rewrite)
+
 # Compiling and Running
 
 ## Prerequisites
